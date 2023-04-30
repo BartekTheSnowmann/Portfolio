@@ -46,17 +46,17 @@ function Home() {
     }
     
   return (
-    <div className='min-h-screen items-center'>
+    <div className='min-h-screen md:min-h-[calc(100vh-10rem)] flex items-center justify-center'>
         <div className='absolute top-40 left-40 w-40 h-40 md:w-60 md:h-60 bg-yellow rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10 animation-delay-2000 '></div>
         <div className='absolute top-1/2 right-40 w-40 h-40 md:w-60 md:h-60 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10'></div>
         <div className='max-w-[1240px]  mx-auto' id='Home'>
-            <div className='grid sm:grid-cols-2 items-center py-12 md:py-24 justify-center px-4 gap-10'>
-                <div className='flex-1'>
+            <div className='flex flex-wrap items-center justify-center py-12 md:py-24 px-4 gap-10'>
+                <div className='md:flex-1'>
                     <motion.div
                     variants={ContainerVariant}
                     initial='hidden'
                     animate='show'>
-                        <motion.h1 className='text-5xl md:text-7xl'
+                        <motion.h1 className='text-5xl sm:text-6xl lg:text-8xl'
                         variants={ItemVariant}>
                             Hello, Im <span className='text-primary'>Bartek</span>
                         </motion.h1>
@@ -73,7 +73,7 @@ function Home() {
                     </motion.div>
                 </div>
 
-                <div className='flex-1'>
+                <div className='md:flex-1'>
                     <img src={Avatar} alt="" className='bg-white rounded-full'/>
                 </div>
             </div>

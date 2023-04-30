@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <div className='h-20'>
-        <motion.div className={NavbarOffset > 100? WithShadow : WithoutShadow}
+        <motion.div className={NavbarOffset > 80? WithShadow : WithoutShadow}
         initial={{y:-100, opacity:0}}
         animate={{y:0, opacity:1}}
         transition={{delay:2,duration:0.6, type:'tween'}}>
