@@ -46,11 +46,11 @@ function Home() {
     }
     
   return (
-    <div>
+    <div className='min-h-screen items-center'>
         <div className='absolute top-40 left-40 w-40 h-40 md:w-60 md:h-60 bg-yellow rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10 animation-delay-2000 '></div>
         <div className='absolute top-1/2 right-40 w-40 h-40 md:w-60 md:h-60 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob -z-10'></div>
         <div className='max-w-[1240px]  mx-auto' id='Home'>
-            <div className='grid sm:grid-cols-2 items-center py-12 sm:py-20 px-4 gap-10'>
+            <div className='grid sm:grid-cols-2 items-center py-12 md:py-24 justify-center px-4 gap-10'>
                 <div className='flex-1'>
                     <motion.div
                     variants={ContainerVariant}

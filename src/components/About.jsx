@@ -37,7 +37,7 @@ function About() {
   return (
     <div className='bg-secondary text-white'>
         <div className='max-w-[1240px] py-10 md:py-20 px-4 mx-auto' id='About'>
-            <motion.div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center'>
                 
                 <div>
                     <h1 className='text-3xl'>About me</h1>
@@ -60,8 +60,7 @@ function About() {
                     </motion.div>
 
                 </motion.div>
-
-            </motion.div>
+            </div>
         </div>
     </div>
   )

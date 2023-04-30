@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 function Navbar() {
 
+    const [NavbarOffset, setNavbarOffset] = useState(0)
+    console.log(NavbarOffset);
+
+    useEffect(()=>
+    {
+        function CalculateYOffset()
+        {
+            setNavbarOffset(window.pageYOffset)
+        }
+        window.addEventListener('scroll',CalculateYOffset)
+        return()=>window.removeEventListener('scroll',CalculateYOffset)
+    })
+
+
+    const WithoutShadow = 'z-10 fixed h-20 bg-white text-secondary w-full flex justify-center items-center px-4'
+    const WithShadow = 'drop-shadow-lg z-10 fixed h-20 bg-white text-secondary w-full flex justify-center items-center px-4'
+
   return (
     <div className='h-20'>
-        <motion.div className='drop-shadow-md z-10 fixed h-20 bg-white text-secondary w-full flex justify-center items-center px-4'
+        <motion.div className={NavbarOffset > 100? WithShadow : WithoutShadow}
         initial={{y:-100, opacity:0}}
         animate={{y:0, opacity:1}}
         transition={{delay:2,duration:0.6, type:'tween'}}>
