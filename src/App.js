@@ -8,6 +8,7 @@ import Work from "./components/Work";
 
 function App() {
   const [currentSection, setCurrentSection] = useState("Home");
+  console.log(currentSection);
 
   return (
     <div className="App">

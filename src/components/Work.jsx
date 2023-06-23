@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { motion, useInView } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react";
 import {
   AnimeWebsitePreview,
   eCommerceSitePreview,
@@ -11,21 +11,6 @@ import {
 import { AiOutlineEye, AiOutlineGithub } from "react-icons/ai";
 
 function Work({ setCurrentSection }) {
-  const ItemVariant = {
-    initial: {
-      opacity: 0,
-      y: 120,
-    },
-    animate: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        type: "tween",
-      },
-    },
-  };
-
   const projectsArray = [
     {
       id: 1,
@@ -94,13 +79,18 @@ function Work({ setCurrentSection }) {
     findCategories();
   }, []);
 
+  const ContainerRef = useRef();
+  const isInView = useInView(ContainerRef, { once: false, amount: 0.2 });
+
+  useEffect(() => {
+    if (isInView) {
+      setCurrentSection("Projects");
+    }
+  }, [isInView]);
+
   return (
-    <div className="bg-yellow" id="Projects">
-      <motion.div
-        className="max-w-[1240px] mx-auto flex flex-col py-10 md:py-20 px-4"
-        onViewportEnter={() => setCurrentSection("Projects")}
-        viewport={{ once: true, amount: 0.5 }}
-      >
+    <div className="bg-yellow" ref={ContainerRef} id="Projects">
+      <motion.div className="max-w-[1240px] mx-auto flex flex-col py-10 md:py-20 px-4">
         <div className="BorderImg pb-4">
           <h1 className="text-3xl font-bold text-primary drop-shadow-lg">
             Projects
@@ -127,7 +117,7 @@ function Work({ setCurrentSection }) {
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
                 layout
                 key={item.heading}
                 className="bg-white group relative flex flex-col md:flex-row gap-4 shadow-lg p-4 md:p-0"
