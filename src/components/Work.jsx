@@ -19,6 +19,8 @@ function Work({ setCurrentSection }) {
       category: "Api",
       description:
         "Goal of the Project was to make a solid website using API.The Website will help u to find various anime. You can see the current list of the most popular ones with option to add them to ur list",
+      link: "https://animeweb-bysnowmann.netlify.app",
+      repo: "https://github.com/BartekTheSnowmann/anime-website.git",
     },
     {
       id: 2,
@@ -27,6 +29,8 @@ function Work({ setCurrentSection }) {
       category: "E-Commerce",
       description:
         "Goal of the Project was to learn React-Redux. Kannon Clothing allows u to search through different categories of products, adding them to cart...etc",
+      link: "https://ecommercesite-bysnowmann.netlify.app/",
+      repo: "https://github.com/BartekTheSnowmann/e-commerce-website.git",
     },
     {
       id: 3,
@@ -35,6 +39,8 @@ function Work({ setCurrentSection }) {
       category: "Landing Page",
       description:
         "Goal of the Project was to learn basic animations with Framer-Motion and how to make a good Ux Design. The website has both of those. Check it out.",
+      link: "https://landingpage-bysnowmann.netlify.app/",
+      repo: "https://github.com/BartekTheSnowmann/landing-page.git",
     },
     {
       id: 4,
@@ -43,6 +49,8 @@ function Work({ setCurrentSection }) {
       category: "Api",
       description:
         "Goal of the project was to learn more about Api. The app allows u to browse through many different recipes.",
+      link: "https://foodapp-bysnowmann.netlify.app/",
+      repo: "https://github.com/BartekTheSnowmann/food-app.git",
     },
     {
       id: 5,
@@ -51,6 +59,8 @@ function Work({ setCurrentSection }) {
       category: "Landing Page",
       description:
         "Goal of the project was to learn more about making good Landing Pages. It is a simple website with animations and other features.",
+      link: "https://fitnessapp-bysnowmann.netlify.app/",
+      repo: "https://github.com/BartekTheSnowmann/fitness-app.git",
     },
     {
       id: 6,
@@ -59,6 +69,8 @@ function Work({ setCurrentSection }) {
       category: "Landing Page",
       description:
         "Goal of the project was nearly the same as in the previous one. I learned more concepts which i think will be useful in the future.",
+      link: "https://someportfolio-bysnowmann.netlify.app/",
+      repo: "https://github.com/BartekTheSnowmann/portfolio-2.git",
     },
   ];
 
@@ -120,7 +132,7 @@ function Work({ setCurrentSection }) {
                 viewport={{ once: true, amount: 0.2 }}
                 layout
                 key={item.heading}
-                className="bg-white group relative flex flex-col md:flex-row gap-4 shadow-lg p-4 md:p-0"
+                className="bg-white group relative flex flex-col md:flex-row gap-4 shadow-lg p-4 lg:p-0"
               >
                 <div className="flex-1">
                   <img src={item.img} className="h-full object-cover" alt="" />
@@ -131,16 +143,10 @@ function Work({ setCurrentSection }) {
                   </h1>
                   <p className="text-lg md:text-xl">{item.description}</p>
                   <div className="pt-5 uppercase font-bold flex gap-x-2">
-                    <a
-                      href="https://animeweb-bysnowmann.netlify.app"
-                      className="Button"
-                    >
+                    <a target="_blank" href={item.link} className="Button">
                       Live <AiOutlineEye size={25} />
                     </a>
-                    <a
-                      href="https://github.com/BartekTheSnowmann/anime-website.git"
-                      className="Button"
-                    >
+                    <a target="_blank" href={item.repo} className="Button">
                       Code <AiOutlineGithub size={25} />
                     </a>
                   </div>
