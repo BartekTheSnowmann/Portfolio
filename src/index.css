@@ -2,92 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Raleway:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&family=Raleway:wght@300&display=swap");
 
-::-webkit-scrollbar
-{
-    @apply w-0
+::-webkit-scrollbar {
+  @apply w-0;
 }
 
-*
-{
-    font-family: 'Golos Text', sans-serif;
-    scroll-behavior: smooth;
+* {
+  font-family: "Golos Text", sans-serif;
+  scroll-behavior: smooth;
 }
 
-html
-{
-    scroll-padding-top: 5rem;
+html {
+  scroll-padding-top: 5rem;
 }
 
-li
-{
-    @apply text-lg uppercase font-bold text-secondary hover:text-primary duration-300 relative
+li {
+  @apply text-lg uppercase font-bold text-secondary duration-300;
 }
 
-li::after
-{
-    width: 8px;
-    height: 8px;
-    content: '';
-    transition: all 0.3s;
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: rotate(-135deg);
-    border-radius: 0 10px 50px 0;
-    pointer-events: none;
+.link__current {
+  @apply relative text-primary;
 }
 
-li:hover::after
-{
-
-    position: absolute;
-    bottom: -12px;
-    right: 50%;
-    width: 8px;
-    height: 8px;
-    background: #4c1d95;
-    transform: rotate(-135deg);
-    border-radius: 0 10px 50px 0;
-    content: '';
-    transition:  all 0.3s;
+.link__current::after {
+  position: absolute;
+  bottom: -12px;
+  right: 50%;
+  width: 8px;
+  height: 8px;
+  background: #4c1d95;
+  transform: rotate(-135deg);
+  border-radius: 0 10px 50px 0;
+  content: "";
+  transition: all 0.3s;
 }
 
-h1
-{
-    @apply font-bold tracking-wide uppercase 
+h1 {
+  @apply font-bold tracking-wide uppercase;
 }
 
-p
-{
-    @apply text-xl
+p {
+  @apply text-xl;
 }
 
-button
-{
-    @apply uppercase hover:bg-violet-900 duration-300
+button {
+  @apply uppercase hover:bg-violet-900 duration-300;
 }
 
-.Button
-{
-    @apply flex gap-x-2 px-4 py-2 border-2 border-primary hover:bg-primary text-primary hover:text-white duration-300
+.Button {
+  @apply flex gap-x-2 px-4 py-2 border-2 border-primary drop-shadow-lg hover:bg-primary text-primary hover:text-white duration-300;
 }
 
-span
-{
-    @apply font-extrabold text-secondary uppercase
+span {
+  @apply font-extrabold text-secondary uppercase;
 }
 
-.BorderImg
-{
+.BorderImg {
   border-bottom: 4px solid white;
-  border-image-source: radial-gradient(circle at top left,
-  #6C63FF, transparent 50%);
+  border-image-source: radial-gradient(
+    circle at top left,
+    #6c63ff,
+    transparent 50%
+  );
   border-image-slice: 1;
-}
-
-.BgImg
-{
-    background-image: linear-gradient();
 }
