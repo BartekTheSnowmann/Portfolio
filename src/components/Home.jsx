@@ -20,7 +20,7 @@ function Home({ setCurrentSection }) {
 
   const ItemVariant = {
     hidden: {
-      x: 100,
+      x: 20,
       opacity: 0,
     },
     show: {
@@ -35,7 +35,7 @@ function Home({ setCurrentSection }) {
 
   const ItemVariant2 = {
     hidden: {
-      y: 100,
+      y: 20,
       opacity: 0,
     },
     show: {

@@ -26,7 +26,7 @@ function Footer() {
         </div>
         <motion.div
           className="flex gap-x-2"
-          initial={{ opacity: 0, x: 100 }}
+          initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ type: "tween", duration: 0.6 }}

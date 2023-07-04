@@ -25,7 +25,7 @@ function About({ setCurrentSection }) {
 
   const ItemVariant = {
     hidden: {
-      x: 50,
+      x: 10,
       opacity: 0,
     },
     show: {
